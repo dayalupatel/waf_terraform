@@ -3,7 +3,9 @@ on: [push]
 
 jobs:
   hello_job:
-    runs-on: ubuntu-latest
+    runs-on: alpine
     steps:
       - name: Echo Hello
-        run: echo "Hello, Pipeline World!"
+        run: |
+          echo "Hello, Pipeline World!"
+          python --version
